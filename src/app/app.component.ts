@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { AiContentComponent } from './ai-content/ai-content.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  standalone: true,
+  imports: [AiContentComponent, HttpClientModule],
+  template: `<app-ai-content></app-ai-content>`,
 })
-export class AppComponent {
-  title = 'ai-content-generator';
-}
+export class AppComponent {}
